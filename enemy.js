@@ -1,13 +1,9 @@
 class Enemy {
-    constructor(x,y,hitbox, health, movementSpeed, currentTime){
+    constructor(x,y,hitbox, health){
         this.xCoordinate = x
         this.yCoordinate = y
         this.hitbox = hitbox
         this.health = health
-        this.speed = movementSpeed
-        this.time = currentTime
-        this.startTime = currentTime
-        this.directionChange = 'x'
     }
     update(currentTime){
         let runCode = false
@@ -92,63 +88,64 @@ class Enemy {
             enemies.splice(enemies.indexOf(this),1)
         }
     }
-    draw(){
-        circle(this.xCoordinate, this.yCoordinate, this.hitbox)
-    }
 }
 
-class AssaultEnemy extends Enemy{
+class Enemy1 extends Enemy{
     constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
-        this.number = 0
-    }
-}
-
-class BombEnemy extends Enemy{
-    constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
+        super(x,y,hitbox, health)
+        this.speed = movementSpeed
+        this.time = currentTime
+        this.startTime = currentTime
+        this.directionChange = 'x'
         this.number = 1
     }
+    draw(){
+        fill('red')
+        circle(this.xCoordinate,this.yCoordinate,this.hitbox)
+    }
 }
 
-class BossEnemy extends Enemy{
+class Enemy2 extends Enemy{
     constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
+        super(x,y,hitbox, health)
+        this.speed = movementSpeed
+        this.time = currentTime
+        this.startTime = currentTime
+        this.directionChange = 'x'
         this.number = 2
     }
+    draw(){
+        fill('blue')
+        circle(this.xCoordinate,this.yCoordinate,this.hitbox)
+    }
 }
 
-class LeechEnemy extends Enemy{
+class Enemy3 extends Enemy{
     constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
+        super(x,y,hitbox, health)
+        this.speed = movementSpeed
+        this.time = currentTime
+        this.startTime = currentTime
+        this.directionChange = 'x'
         this.number = 3
     }
+    draw(){
+        fill('black')
+        circle(this.xCoordinate,this.yCoordinate,this.hitbox)
+    }
 }
 
-class ShieldEnemy extends Enemy{
+class Enemy4 extends Enemy{
     constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
+        super(x,y,hitbox, health)
+        this.speed = movementSpeed
+        this.time = currentTime
+        this.startTime = currentTime
+        this.directionChange = 'x'
         this.number = 4
     }
-}
-
-class SiegeEnemy extends Enemy{
-    constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
-        this.number = 5
-    }
-}
-
-class SpiderEnemy extends Enemy{
-    constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
-        this.number = 6
-    }
-}
-
-class TankEnemy extends Enemy{
-    constructor(hitbox,x,y,movementSpeed,currentTime, health){
-        super(x,y,hitbox, health, movementSpeed, currentTime, currentTime)
-        this.number = 7
+    draw(){
+        fill('purple')
+        circle(this.xCoordinate,this.yCoordinate,this.hitbox)
     }
 }
