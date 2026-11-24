@@ -616,12 +616,12 @@ function newEnemy(){
         enemySpeed = playerLevel * 10
     }
     if(enemyNumber == 0){
-        enemies.push(new AssaultEnemy(enemyHitbox , startX, startY,enemySpeed * 0.5, currentTime, 10))
+        enemies.push(new Enemy1(enemyHitbox , startX, startY,enemySpeed * 0.5, currentTime, 10))
     } else if(enemyNumber == 1){
-        enemies.push(new BombEnemy(enemyHitbox , startX, startY,enemySpeed, currentTime, 20))
+        enemies.push(new Enemy2(enemyHitbox , startX, startY,enemySpeed, currentTime, 20))
     } else if(enemyNumber == 2){
-        enemies.push(new LeechEnemy(enemyHitbox , startX, startY,enemySpeed * 1.5, currentTime, 25))
+        enemies.push(new Enemy3(enemyHitbox , startX, startY,enemySpeed * 1.5, currentTime, 25))
     } else if(enemyNumber == 3){
-        enemies.push(new ShieldEnemy(enemyHitbox , startX, startY,enemySpeed * 2, currentTime, 50))
+        enemies.push(new Enemy4(enemyHitbox , startX, startY,enemySpeed * 2, currentTime, 50))
     }
 }
